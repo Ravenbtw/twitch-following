@@ -1,0 +1,44 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+input {
+  width: 100%;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+}
+
+.primary {
+  background-color: #19171C;
+}
+
+.secondary {
+  background-color: #0F0E11;
+}
+
+.purple {
+  background-color: #6441A4 !important;
+}
+
+.card {
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+a {
+  text-decoration: none !important;
+}
