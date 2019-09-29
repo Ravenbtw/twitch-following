@@ -9,20 +9,22 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body class="secondary text-white text-center">
-    <div class="container-fluid purple">
-      <div class="row">
-        <div class="col-12">
-          <div class="container">
-            <p class="display-4">Twitch Following</p>
-          </div>
-        </div>
+    <nav class="navbar navbar-expand-sm navbar-dark purple">
+      <div class="container">
+        <a href="#" class="navbar-brand">Twitch Following</a>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a href="https://streamelements.com/ravenbtw/tip" class="nav-link" target="_blank">Donate</a>
+          </li>
+        </ul>
       </div>
-    </div>
+    </nav>
 
-    <div class="container my-2 rounded">
+    <div class="container my-2 rounded content">
       <div class="row">
         <div class="col-12">
-          <input class="form-control-lg my-5 text-center" placeholder="Enter a Twitch name to see who they are following...">
+          <div class="col-12 header"><p class="display-4">Enter a name to see who they're following...</p></div>
+          <input class="form-control-lg text-center" placeholder="Example: Trainwreckstv" autofocus>
         </div>
       </div>
       <div class="row" id="followList"></div>
