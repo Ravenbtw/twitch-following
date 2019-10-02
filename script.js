@@ -22,7 +22,7 @@ function findID(name) {
     followList.innerHTML = '';
     header.innerHTML = '';
     if (result.data[0]) {
-      followList.insertAdjacentHTML('afterbegin', '<div class="col-12"><p class="display-4">' + name.toUpperCase() + ' IS FOLLOWING:</p></div>');
+      followList.insertAdjacentHTML('afterbegin', '<div class="col-12"><p class="display-4 my-3">' + name.toUpperCase() + ' IS FOLLOWING:</p></div>');
       insertChannelHTML(result.data[0].id, page);
     } else {
       followList.insertAdjacentHTML('afterbegin', '<div class="col-12"><p class="display-4">CHANNEL "' + name.toUpperCase() + '" COULD NOT BE FOUND</p></div>');
