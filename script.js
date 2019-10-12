@@ -2,6 +2,7 @@ const input = document.querySelector('input');
 const content = document.querySelector('.content');
 const header = document.querySelector('.header');
 const followList = document.querySelector('#followList');
+const searchInfo = document.querySelector('.searchInfo');
 let channelName;
 let foundChannels;
 let page;
@@ -22,10 +23,9 @@ function findID(name) {
     followList.innerHTML = '';
     header.innerHTML = '';
     if (result.data[0]) {
-      followList.insertAdjacentHTML('afterbegin', '<div class="col-12"><p class="display-4 my-3">' + name.toUpperCase() + ' IS FOLLOWING:</p></div>');
       insertChannelHTML(result.data[0].id, page);
     } else {
-      followList.insertAdjacentHTML('afterbegin', '<div class="col-12"><p class="display-4">CHANNEL "' + name.toUpperCase() + '" COULD NOT BE FOUND</p></div>');
+      searchInfo.innerHTML = 'CHANNEL "' + name.toUpperCase() + '" COULD NOT BE FOUND';
     }
   })
 }
@@ -59,15 +59,16 @@ function insertChannelHTML(id, page) {
             `;
 
             followList.insertAdjacentHTML('beforeend', html);
-          })
+          });
         } else {
           followList.innerHTML = '';
-          followList.insertAdjacentHTML('afterbegin', '<div class="col-12"><p class="display-4">' + input.value.replace(/ /g, '').toUpperCase() + ' IS NOT FOLLOWING ANYONE</p></div>');
+          searchInfo.innerHTML = input.value.replace(/ /g, '').toUpperCase() + ' IS NOT FOLLOWING ANYONE';
         }
 
         if (page < Math.ceil(result._total/100)) {
           console.log(foundChannels, result._total, Math.ceil(result._total/100));
           page++;
+          searchInfo.innerHTML = input.value.toUpperCase() + ' IS FOLLOWING ' + foundChannels + ' PEOPLE:';
           insertChannelHTML(id, page);
         }
       })
