@@ -15,7 +15,6 @@ function findID(name) {
   })
   .then((response) => response.json())
   .then((result) => {
-    console.log(result);
     foundChannels = 0;
     page = 0;
     content.style.top = '0';
@@ -38,12 +37,9 @@ function insertChannelHTML(id, page) {
       }})
       .then((response) => response.json())
       .then((result) => {
-        console.log(result);
         if (result._total > 0) {
           result.follows.forEach((follow, index) => {
             foundChannels++;
-            console.log(foundChannels);
-            console.log(follow.channel.display_name);
             var html = `
               <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
               <a href="${follow.channel.url}" class="text-white" target="_blank">
@@ -66,7 +62,6 @@ function insertChannelHTML(id, page) {
         }
 
         if (page < Math.ceil(result._total/100)) {
-          console.log(foundChannels, result._total, Math.ceil(result._total/100));
           page++;
           searchInfo.innerHTML = input.value.toUpperCase() + ' IS FOLLOWING ' + foundChannels + ' PEOPLE:';
           insertChannelHTML(id, page);
