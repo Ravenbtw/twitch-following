@@ -47,7 +47,7 @@ function insertChannelHTML(id, page) {
                   <img class="card-img-top" src="${follow.channel.logo}">
                   <div class="card-body">
                     <h4>${follow.channel.display_name}</h4>
-                    <h5>Followed on<br>` + follow.created_at.substring(0,10) + `</h5>
+                    <h5>Followed on:<br>` + follow.created_at.replace('T', '<br>').replace('Z', '') + `</h5>
                   </div>
                 </div>
                 </a>
