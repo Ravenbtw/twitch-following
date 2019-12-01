@@ -78,3 +78,15 @@ input.onkeyup = (event) => {
     }
   }
 }
+
+let player = new Twitch.Embed('twitch-embed', {
+  width: 320,
+  height: 180,
+  channel: 'twitchdoespixelart',
+  layout: 'video',
+  controls: false
+})
+
+document.querySelector('#twitch-embed').onclick = () => {
+  console.log('test');
+}

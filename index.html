@@ -15,6 +15,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="https://embed.twitch.tv/embed/v1.js"></script>
     <title>Twitch Following - See who people are following...</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="style.css">
@@ -40,11 +41,13 @@
       <div class="row">
         <div class="col-12">
           <div class="col-12 header"><p class="display-4">Enter a name to see who they're following...</p></div>
-          <input class="form-control-lg text-center" placeholder="Example: ItsSliker" autofocus>
+          <input class="form-control-lg text-center" placeholder="Example: Ravenbtw" autofocus>
           <div class="col-12"><p class="display-4 searchInfo my-4"></div></p>
         </div>
       </div>
       <div class="row" id="followList"></div>
+      <div id="twitch-embed"><a href="https://twitch.tv/twitchdoespixelart" target="_blank" style="position: absolute; width:320px; height:180px"></a></div>
+      <p>Click above to check out Twitch Does Pixel Art!</p>
     </div>
 
     <div class="footer primary">
