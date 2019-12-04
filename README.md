@@ -9,4 +9,4 @@ A web app that allows you to see who other Twitch users are following.
 https://twitchfollowing.com 
 
 # Instructions
-Type a Twitch username into the input box, and press enter. 
+Type a Twitch username into the input box, and press enter. After the site has gotten all the appropriate information from the Twitch API, it will append it. 
