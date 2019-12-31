@@ -80,8 +80,8 @@ input.onkeyup = (event) => {
 }
 
 let player = new Twitch.Embed('twitch-embed', {
-  width: 640,
-  height: 360,
+  width: 320,
+  height: 180,
   channel: 'twitchdoespixelart',
   layout: 'video',
   controls: false
