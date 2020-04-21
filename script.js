@@ -10,12 +10,12 @@ let page;
 let starterName = location.search.substring(1);
 
 if (starterName) {
-  findID(starterName);
+  findID(starterName.toLowerCase());
 }
 
 function findID(name, addToParam) {
   if (addToParam) {
-    history.pushState(null, null, '?' + name.toLowerCase());
+    history.pushState(null, null, '?' + name);
   }
   input.value = name;
   fetch('https://api.twitch.tv/helix/users?login=' + name, {
@@ -84,7 +84,7 @@ input.onkeyup = (event) => {
   if (event.which == 13) {
     var name = input.value.replace(/\W/g, '');;
     if (name.length > 0) {
-      findID(name, true);
+      findID(name.toLowerCase(), true);
     }
   }
 }
