@@ -15,7 +15,7 @@ if (starterName) {
 
 function findID(name, addToParam) {
   if (addToParam) {
-    history.pushState(null, null, '?' + name);
+    history.pushState(null, null, '?' + name.toLowerCase());
   }
   input.value = name;
   fetch('https://api.twitch.tv/helix/users?login=' + name, {
