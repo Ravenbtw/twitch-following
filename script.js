@@ -18,21 +18,23 @@ function findID(name, addToParam) {
     history.pushState(null, null, '?' + name);
   }
   input.value = name;
-  fetch('https://api.twitch.tv/helix/users?login=' + name, {
+  fetch('https://api.twitch.tv/kraken/users?login=' + name, {
     headers: {
+      'Accept': 'application/vnd.twitchtv.v5+json',
       'Client-ID': 'cclk5hafv1i7lksfauerry4w7ythu2'
     }
   })
   .then((response) => response.json())
   .then((result) => {
+    console.log(result)
     foundChannels = 0;
     page = 0;
     content.style.top = '0';
     content.style.transform = 'translateY(0)';
     followList.innerHTML = '';
     header.innerHTML = '';
-    if (result.data[0]) {
-      insertChannelHTML(result.data[0].id, page);
+    if (result.users[0]) {
+      insertChannelHTML(result.users[0]._id, page);
     } else {
       searchInfo.innerHTML = 'CHANNEL "' + name.toUpperCase() + '" COULD NOT BE FOUND';
     }
@@ -48,6 +50,7 @@ function insertChannelHTML(id, page) {
   })
   .then((response) => response.json())
   .then((result) => {
+    console.log(result)
     if (result._total > 0) {
       result.follows.forEach((follow, index) => {
         foundChannels++;
