@@ -39,11 +39,11 @@ input {
   background-color: #6441A4 !important;
 }
 
-.card {
-  transition: transform 0.2s;
+.following-card {
+  transition: transform 0.1s;
 }
 
-.card:hover {
+.following-card:hover {
   transform: scale(1.05);
 }
 

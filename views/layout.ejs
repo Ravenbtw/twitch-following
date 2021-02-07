@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitch Following</title>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148995639-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-148995639-2');
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body class="bg-black text-white text-center">
+    <div class="navbar navbar-expand-lg navbar-dark bg-purple">
+        <div class="container">
+            <a class="navbar-brand" href="/">Twitch Following</a>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link<%= tool === 'following' ? ' active':'' %>" href="/">Following List</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link<%= tool === 'first' ? ' active':'' %>" href="/first">First Followers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/old">Old Site</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container my-5">
+        <%- body %>
+        <script src="js/<%= tool %>.js"></script>
+    </div>
+    <div class="ad">
+        <iframe src="https://player.twitch.tv/?channel=twitchdoespixelart&parent=twitchfollowing.com" frameborder="0" width="320" height="180"></iframe>
+        <a class="text-purple d-block" href="https://twitch.tv/twitchdoespixelart">Click here to check out Twitch Does Pixel Art!</a>
+    </div>
+    <div class="footer bg-grey">
+        <p class="m-0">Made by <a class="text-purple" href="https://ravenbtw.com">Ravenbtw</a></p>
+    </div>
+</body>
+</html>

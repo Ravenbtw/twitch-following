@@ -1,0 +1,60 @@
+html, body {
+    min-height: 100%;
+}
+
+body {
+    position: absolute;
+    width: 100%;
+    padding-bottom: 300px;
+}
+
+body, input {
+    font-family: 'Open Sans', sans-serif !important;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+.bg-black {
+    background-color: #000;
+}
+
+.bg-purple {
+    background-color: #9146FF;
+}
+
+.bg-grey {
+    background-color: #0E0E10;
+}
+
+.text-purple, .text-purple:hover {
+    color: #9146FF;
+}
+
+.ad {
+    position: absolute;
+    bottom: 50px;
+    width: 100%;
+    height: 250px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+}
+
+.following-card {
+    transition: opacity 1s, transform 0.2s;
+}
+
+.following-card:hover {
+    transform: scale(1.05);
+}
+
+.first-card p {
+    margin: 0;
+}
