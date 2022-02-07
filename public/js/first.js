@@ -8,7 +8,6 @@ const getDataFromAPI = name => {
     })
     .then(res => res.json())
     .then(usersData => {
-        console.log(usersData);
         if (usersData && usersData.users && usersData.users[0]) {
             const user = usersData.users[0];
             resultDiv.innerHTML = `<div class="col-12 my-3"><h1>Looking for ${user.display_name}'s first followers...`;
@@ -20,7 +19,6 @@ const getDataFromAPI = name => {
             })
             .then(res => res.json())
             .then(firstFollowers => {
-                console.log(firstFollowers);
                 resultDiv.innerHTML = `<div class="col-12 my-3"><h1>${user.display_name}'s first ${firstFollowers.follows.length} followers:</h1></div>`;
                 resultDiv.insertAdjacentHTML('beforeend', `
                 <div class="col-12 mb-3">

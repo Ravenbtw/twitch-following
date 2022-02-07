@@ -34,9 +34,11 @@
                     <li class="nav-item">
                         <a class="nav-link<%= tool === 'following' ? ' active':'' %>" href="/">Following List</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link<%= tool === 'first' ? ' active':'' %>" href="/first">First Followers</a>
-                    </li>
+                    <% if (showFirstFollowersButton) { %>
+                        <li class="nav-item">
+                            <a class="nav-link<%= tool === 'first' ? ' active':'' %>" href="/first">First Followers</a>
+                        </li>
+                    <% } %>
                     <li class="nav-item">
                         <a class="nav-link" href="https://www.twitchdatabase.com/roles" target="_blank">Mod/VIP Lookup</a>
                     </li>
