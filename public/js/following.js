@@ -1,5 +1,5 @@
 const getDataFromAPI = name => { // this is all broken, gotta fix it somehow.
-    if (Math.floor(Math.random() * Math.floor((new Date('02/20/2022') - new Date()) / (1000 * 3600 * 24))) === 0) {
+    if (Math.floor(Math.random() * Math.floor((new Date('02/27/2022') - new Date()) / (1000 * 3600 * 24))) === 0) {
         window.location.href = `https://www.twitchdatabase.com/following/${name}`;
     } else {
         resultDiv.innerHTML = `<div class="col-12 my-3"><h1>Looking for ${name}'s Twitch ID...</h1></div>`;
@@ -10,7 +10,6 @@ const getDataFromAPI = name => { // this is all broken, gotta fix it somehow.
             }
         })
         .then(res => {
-            console.log(res.status);
             if (res.status === 200) {
                 return res.json();
             } else {
